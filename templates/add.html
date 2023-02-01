@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addtablecrudmongo</title>
+    <style>
+        form{
+            text-align:center;
+            margin-top:80px;
+        }
+        input{
+            width: 30%;
+            padding: 10px;
+        }
+        input[type="Submit"]{
+            background-color:grey;
+            width:10%;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{url_for('add')}}" method="POST">
+        <input type="number" name="id" placeholder="Enter id"><br><br>
+        <input type="text" name="name" placeholder="Enter name"><br><br>
+        <input type="text" name="title" placeholder="Enter title"><br><br>
+        <input type="text" name="author" placeholder="Enter author"><br><br>
+        <input type="submit" value="submit">
+      </form>
+</body>
+</html>
+  

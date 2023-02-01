@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crudmongo</title>
+    <style>
+        table{
+            text-align: center;
+            border-collapse:collapse;
+        
+        }
+        caption{
+            font-size:24px;
+            font-weight:600;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Flask Crud Using Mongodb</h1><hr>
+    <div style="justify-content:right; text-align:right;">
+        <a href="{{url_for('add')}}" class="btn btn-success">ADD USER</a>
+    </div>
+    <table border="1">
+        <caption>Add Users</caption>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>title</th>
+            <th>author</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {%for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.author}}</td>
+            <td><a href="{{url_for('updateall',id=i.id)}}">Edit User</a></td>
+            <td><a href="{{url_for('deleteall',id=i.id)}}">Delete User</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</body>
+</html>
